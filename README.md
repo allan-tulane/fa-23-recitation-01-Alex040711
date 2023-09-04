@@ -72,9 +72,15 @@ The best case input value of the key for linear search would be the key that is 
 Yes. As the input size (n) increases, the running time of linear search also increases linearly. The running time of the binary search grow much more slowly as n increases compared to linear search.
 
 - [ ]
-  + What is worst-case complexity of searching a list of $n$ elements $k$ times using linear search? **TODO: your answer goes here
+  + What is worst-case complexity of searching a list of $n$ elements $k$ times using linear search? 
+    **TODO: your answer goes here
+
     O(nk)**
-  + For binary search? **TODO: your answer goes here
+  + For binary search? 
+    **TODO: your answer goes here
+
     O(k * log(n)).**
-  + For what values of $k$ is it more efficient to first sort and then use binary search versus just using linear search without sorting? **TODO: your answer goes here
+  + For what values of $k$ is it more efficient to first sort and then use binary search versus just using linear search without sorting? 
+    **TODO: your answer goes here
+
     In general, for larger values of n where log n is relatively small compared to n, sorting and binary search will be more efficient for larger values of k. However, for very small values of n or when log n is close to n, linear search without sorting might be more efficient for most values of k.**
