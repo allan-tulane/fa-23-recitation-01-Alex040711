@@ -1,16 +1,17 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=11681067&assignment_repo_type=AssignmentRepo)
+
 # CMPS 2200  Recitation 01
 
-**Name (Team Member 1):**_________________________  
+**Name (Team Member 1):**_________________________
 **Name (Team Member 2):**_________________________
 
-In this recitation, we will investigate asymptotic complexity. Additionally, we will get familiar with the various technologies we'll use for collaborative coding.
+In this recitation, we will investigate asymptotic complexity. Additionally, we will get familiar with the various technologies we'dll use for collaborative coding.
 
 To complete this recitation, follow the instructions in this document. Some of your answers will go in this file, and others will require you to edit `main.py`.
 
 ## Install Python Dependency
 
-We need Python library of "tabulate" to visualize the results in a good shape. Please install it by running 'pip install tabulate' or 'pip install -r requirements.txt' in Shell Tab of Repl.  
+We need Python library of "tabulate" to visualize the results in a good shape. Please install it by running 'pip install tabulate' or 'pip install -r requirements.txt' in Shell Tab of Repl.
 
 ## Running and testing your code
 
@@ -32,33 +33,48 @@ We'll compare the running times of `linear_search` and `binary_search` empirical
 
 `Binary Search`: Search a sorted array by repeatedly dividing the search interval in half. Begin with an interval covering the whole array. If the value of the search key is less than the item in the middle of the interval, narrow the interval to the lower half. Otherwise, narrow it to the upper half. Repeatedly check until the value is found or the interval is empty.
 
-- [ ] 1. In `main.py`, the implementation of `linear_search` is already complete. Your task is to implement `binary_search`. Implement a recursive solution using the helper function `_binary_search`. 
-
-- [ ] 2. Test that your function is correct by calling from the command-line `pytest main.py::test_binary_search`
-
-- [ ] 3. Write at least two additional test cases in `test_binary_search` and confirm they pass.
-
-- [ ] 4. Describe the worst case input value of `key` for `linear_search`? for `binary_search`? 
+- [ ]
+- [ ]
+- [ ]
+- [ ]
 
 **TODO: your answer goes here**
 
-- [ ] 5. Describe the best case input value of `key` for `linear_search`? for `binary_search`? 
+**The worst case input value of key for linear search and binary search would be the key that is not present in the list. In this case the algorithm have to search through the entire list to determine that the key is not there.**
+
+- [ ]
 
 **TODO: your answer goes here**
 
-- [ ] 6. Complete the `time_search` function to compute the running time of a search function. Note that this is an example of a "higher order" function, since one of its parameters is another function.
+The best case input value of the key for linear search would be the key that is at the beginning of the list, which is at index 0. The best case input value of the key for binary search would be the key that is at exactly the middle of the list.
 
-- [ ] 7. Complete the `compare_search` function to compare the running times of linear search and binary search. Confirm the implementation by running `pytest main.py::test_compare_search`, which contains some simple checks.
-
-- [ ] 8. Call `print_results(compare_search())` and paste the results here:
+- [ ]
+- [ ]
+- [ ]
 
 **TODO: add your timing results here**
 
-- [ ] 9. The theoretical worst-case running time of linear search is $O(n)$ and binary search is $O(log_2(n))$. Do these theoretical running times match your empirical results? Why or why not?
+
+| n        | linear  | binary |
+| -------- | ------- | ------ |
+| 10       | 0.001   | 0.001  |
+| 100      | 0.001   | 0.001  |
+| 1000     | 0.021   | 0.002  |
+| 10000    | 0.246   | 0.002  |
+| 100000   | 2.237   | 0.004  |
+| 1000000  | 23.399  | 0.010  |
+| 10000000 | 227.089 | 0.014  |
+
+- [ ]
 
 **TODO: your answer goes here**
 
-- [ ] 10. Binary search assumes the input list is already sorted. Assume it takes $\Theta(n^2)$ time to sort a list of length $n$. Suppose you know ahead of time that you will search the same list $k$ times. 
-  + What is worst-case complexity of searching a list of $n$ elements $k$ times using linear search? **TODO: your answer goes here**
-  + For binary search? **TODO: your answer goes here**
-  + For what values of $k$ is it more efficient to first sort and then use binary search versus just using linear search without sorting? **TODO: your answer goes here**
+Yes. As the input size (n) increases, the running time of linear search also increases linearly. The running time of the binary search grow much more slowly as n increases compared to linear search.
+
+- [ ]
+  + What is worst-case complexity of searching a list of $n$ elements $k$ times using linear search? **TODO: your answer goes here
+    O(nk)**
+  + For binary search? **TODO: your answer goes here
+    O(k * log(n)).**
+  + For what values of $k$ is it more efficient to first sort and then use binary search versus just using linear search without sorting? **TODO: your answer goes here
+    In general, for larger values of n where log n is relatively small compared to n, sorting and binary search will be more efficient for larger values of k. However, for very small values of n or when log n is close to n, linear search without sorting might be more efficient for most values of k.**
